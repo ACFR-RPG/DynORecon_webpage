@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description"
+    content="Evaluation and comparison of different formulations for Dynamic SLAM">
+  <meta property="og:title" content="DynORecon: Dynamic Object Reconstruction for Navigation" />
+  <meta property="og:description" content="Incremental dense reconstruction of dynamic objects in dynamic environments for navigation." />
+  <meta property="og:url" content="https://acfr-rpg.github.io/DynORecon/" />
+  <meta property="og:image" content="https://acfr-rpg.github.io/DynORecon/static/images/frontpage_teaser_dynorecon_mesh.svg" />
+  <meta property="og:image:width" content="659" />
+  <meta property="og:image:height" content="410" />
+
+  <meta name="twitter:title" content="The Importance of Coordinate Frames in Dynamic SLAM">
+  <meta name="twitter:description" content="Incremental dense reconstruction of dynamic objects in dynamic environments for navigation.">
+  <meta name="twitter:image" content="https://acfr-rpg.github.io/DynORecon/static/images/frontpage_teaser_dynorecon_mesh.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Dense reconstruction, dynamic environments, navigation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>DynORecon: Dynamic Object Reconstruction for Navigation</title>
+  <link rel="icon" type="image/x-icon" href="static/images/acfr_rpg_logo.png">
+
+  <link rel="stylesheet" href="static/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <!-- <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script> -->
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bootstrap.bundle.min.js"></script>
+</head>
+
+
+
+<body>
+  <div class="container">
+    <!-- Title -->
+    <h1 class="pt-5 title">DynORecon: Dynamic Object Reconstruction for Navigation</h1>
+    <div class="d-flex flex-row justify-content-center">
+      Yiduo Wang, Jesse Morris, Lan Wu, Teresa Vidal-Calleja, Viorela Ila
+    </div>
+
+    <div class="w-100 d-flex flex-row justify-content-center mt-4 gap-2">
+      <!-- Paper PDF -->
+<!--       <a href="https://ieeexplore.ieee.org/abstract/document/10610840" target="_blank" class="btn btn-dark" role="button">
+        <span class="icon">
+          <i class="ai ai-ieee"></i>
+        </span>
+        <span>Paper</span>
+      </a>
+ -->
+      <!-- Paper PDF -->
+      <a href="https://arxiv.org/abs/2409.19928" target="_blank" class="btn btn-dark" role="button">
+        <span class="icon">
+          <i class="ai ai-arxiv"></i>
+        </span>
+        <span>Arxiv</span>
+      </a>
+
+      <!-- Code -->
+<!--       <a href="https://github.com/ACFR-RPG/dynamic_slam_coordinates" target="_blank" class="btn btn-dark" role="button">
+        <span class="icon">
+          <i class="fab fa-github"></i>
+        </span>
+        <span>Code</span>
+      </a>
+ -->
+    </div>
+
+    <!-- Teaser -->
+  
+    <!-- TL;DR
+    <h2>TL;DR</h2>
+    <div class="alert alert-primary tldr mb-4">
+      pixelSplat infers a 3D Gaussian scene from two input views in a single forward pass.
+    </div> -->
+
+    <!-- Abstract -->
+    <h2>Abstract</h2>
+    <p class="mb-4">
+      This paper presents DynORecon, a Dynamic Object Reconstruction system that leverages the information provided by Dynamic SLAM to simultaneously generate a volumetric map of observed moving entities while estimating free space to support navigation. By capitalising on the motion estimations provided by Dynamic SLAM, DynORecon continuously refines the representation of dynamic objects to eliminate residual artefacts from past observations and incrementally reconstructs each object, seamlessly integrating new observations to capture previously unseen structures. Our system is highly efficient (~20 FPS) and produces accurate (~10 cm) reconstructions of dynamic objects using simulated and real-world outdoor datasets. 
+    </p>
+
+    <div class="sep"></div>
+    <h3>BibTex</h3>
+    <pre class="bib">
+      @INPROCEEDINGS{Wang2025icra_dynorecon,
+        title={DynORecon: Dynamic Object Reconstruction for Navigation},
+        author={Wang, Yiduo and Morris, Jesse and Wu, Lan and Vidal-Calleja, Teresa and Ila, Viorela},
+        year={2025},
+        booktitle={IEEE International Conference on Robotics and Automation (ICRA)} 
+      }
+    </pre>
+    
+    
+    <img src="static/images/graphicAbstract.svg" class="img-fluid w-100 mt-2 mb-3" alt="incremental dense volumetric reconstruction" />
+    <!-- <h2>Comparison vs. Baselines</h2> -->
+    <p>DynORecon constructing an approaching vehicle incrementally based on a Dynamic SLAM framework. 
+    (a): We visualise the volumetric reconstruction of a dynamic object in addition to the object trajectory, camera pose and camera trajectory to better represent the volumes of reconstructed obstacles. We also visualise the dense reconstruction of the static environment. 
+    (b): Initial observation of the object. (c--d): Object reconstruction being completed as more observations are integrated into it.
+    </p>
+    <ul>
+      <!-- <li><a href="https://yilundu.github.io/wide_baseline/">The Method of Du et al.</a>: A light field renderer
+        designed for wide-baseline novel view synthesis.</li>
+      <li><a href="https://mohammedsuhail.net/gen_patch_neural_rendering/">GPNR</a>: A light field transformer which
+        struggles with only two input views.</li>
+      <li><a href="https://alexyu.net/pixelnerf/">pixelNeRF</a>: A well-known NeRF-based approach which struggles on
+        scene-scale datasets because it does not handle scale ambiguity.</li> -->
+    </ul>
+
+<!--     <div class="w-100 my-4">
+      <h1 class="pt-5 title">Presentation</h1>
+        <video class="w-100 d-block" autoplay controls muted loop>
+          <source src="static/videos/ICRA2024_1643_presentation.mp4" type="video/mp4">
+        </video>
+      </div>
+ -->
+  <div class="w-100 my-4">
+    <h1 class="pt-5 title">Supplementary Video</h1>
+      <video class="w-100 d-block" autoplay controls muted loop>
+        <source src="static/videos/ICRA2025_supplementary.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-top mt-5 py-4">
+      This page's code uses elements from this <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+        target="_blank">Academic Project Page
+        Template</a>.
+    </footer>
+  </div>
+</body>
+
+</html>
